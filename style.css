@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* App Box */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    padding: 30px 20px 50px;
+    border-radius: 10px;
+}
+
+/* Heading */
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Input Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #edeef0;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/* Input */
+input {
+    flex: 1;
+    min-width: 150px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+/* Button */
+button {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background-color: #ff5945;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* List */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    margin-top: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+
+/* Checkbox */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+/* Delete button */
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    background: #ddd;
+    border-radius: 50%;
+}
+
+/* 📱 Responsive */
+@media (max-width: 500px) {
+    .todo-app {
+        padding: 20px 15px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    ul li {
+        font-size: 15px;
+    }
+}
